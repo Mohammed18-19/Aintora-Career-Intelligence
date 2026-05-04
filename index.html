@@ -1,14 +1,825 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Ausbildung Intelligence Hunter — Find the best Ausbildung programs in Germany" />
-    <title>Ausbildung Intelligence Hunter</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AINTORA — Ausbildung Hunter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Syne:wght@400;500;700&display=swap" rel="stylesheet" />
+  <script src="config.js"></script>
+  <script src="engine.js"></script>
+  <style>
+    :root {
+      --navy:      #080C17;
+      --navy-2:    #0F1526;
+      --navy-3:    #171E33;
+      --navy-4:    #1E2840;
+      --navy-5:    #283352;
+      --pink:      #E8245C;
+      --pink-soft: #FF4D7E;
+      --pink-dim:  rgba(232,36,92,0.10);
+      --pink-glow: rgba(232,36,92,0.18);
+      --teal:      #00D4AA;
+      --teal-dim:  rgba(0,212,170,0.09);
+      --amber:     #F5A623;
+      --amber-dim: rgba(245,166,35,0.10);
+      --blue:      #60A5FA;
+      --blue-dim:  rgba(96,165,250,0.10);
+      --red:       #F87171;
+      --red-dim:   rgba(248,113,113,0.10);
+      --text-1:    #EFF3FF;
+      --text-2:    #8B97B8;
+      --text-3:    #4A5570;
+      --border:    rgba(255,255,255,0.055);
+      --border-2:  rgba(255,255,255,0.11);
+      --mono: 'IBM Plex Mono', monospace;
+      --sans: 'Syne', sans-serif;
+      --r: 8px;
+      --r-lg: 12px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; }
+    body { font-family: var(--sans); background: var(--navy); color: var(--text-1); min-height: 100vh; overflow-x: hidden; }
+
+    /* ── LAYOUT ── */
+    .app { display: flex; min-height: 100vh; }
+
+    /* ── SIDEBAR ── */
+    .sidebar {
+      width: 228px; flex-shrink: 0;
+      background: var(--navy-2);
+      border-right: 1px solid var(--border);
+      padding: 1.25rem 1rem;
+      display: flex; flex-direction: column;
+      position: sticky; top: 0; height: 100vh; overflow-y: auto;
+    }
+    .logo { margin-bottom: 1.75rem; }
+    .logo-mark { display: flex; align-items: center; gap: 10px; }
+    .logo-diamond {
+      width: 30px; height: 30px; background: var(--pink);
+      transform: rotate(45deg); flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .logo-diamond span { transform: rotate(-45deg); font-family: var(--mono); font-size: 12px; font-weight: 500; color: #fff; }
+    .logo-name { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-1); }
+    .logo-sub  { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--pink); font-family: var(--mono); margin-top: 1px; }
+
+    .nav-section { margin-bottom: 1.4rem; }
+    .nav-lbl { font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-3); font-family: var(--mono); padding: 0 8px; margin-bottom: 5px; }
+    .nav-item {
+      display: flex; align-items: center; gap: 8px;
+      padding: 7px 9px; border-radius: var(--r);
+      font-size: 12px; color: var(--text-2);
+      cursor: pointer; transition: background 0.14s, color 0.14s;
+      margin-bottom: 1px; user-select: none;
+    }
+    .nav-item:hover { background: var(--navy-3); color: var(--text-1); }
+    .nav-item.active { background: var(--pink-dim); color: var(--pink-soft); }
+    .nav-item .ni-dot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; opacity: .7; flex-shrink: 0; }
+    .nav-item .ni-badge {
+      margin-left: auto; font-family: var(--mono); font-size: 9px;
+      padding: 1px 6px; border-radius: 10px;
+      background: var(--navy-4); color: var(--text-3);
+    }
+    .nav-item.active .ni-badge { background: var(--pink-glow); color: var(--pink-soft); }
+
+    /* API KEY BOX */
+    .api-box {
+      background: var(--navy-3); border: 1px solid var(--border);
+      border-radius: var(--r); padding: 10px; margin-bottom: 1.4rem;
+    }
+    .api-box-title { font-family: var(--mono); font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: var(--text-3); margin-bottom: 7px; }
+    .api-row { display: flex; gap: 5px; }
+    .api-input {
+      flex: 1; background: var(--navy-4); border: 1px solid var(--border);
+      border-radius: 5px; padding: 5px 7px;
+      font-family: var(--mono); font-size: 10px; color: var(--text-1);
+      outline: none; transition: border-color .15s; min-width: 0;
+    }
+    .api-input:focus { border-color: var(--border-2); }
+    .api-input::placeholder { color: var(--text-3); }
+    .btn-api {
+      background: var(--navy-5); border: 1px solid var(--border-2);
+      border-radius: 5px; padding: 5px 8px;
+      color: var(--text-2); font-size: 10px; font-family: var(--mono);
+      cursor: pointer; transition: all .15s; white-space: nowrap; flex-shrink: 0;
+    }
+    .btn-api:hover { background: var(--navy-4); color: var(--text-1); }
+    .api-status { font-family: var(--mono); font-size: 9px; margin-top: 6px; display: flex; align-items: center; gap: 5px; }
+    .api-dot { width: 5px; height: 5px; border-radius: 50%; }
+    .api-dot.ok   { background: var(--teal); }
+    .api-dot.none { background: var(--text-3); }
+
+    /* PROFILE */
+    .sb-profile { margin-top: auto; border-top: 1px solid var(--border); padding-top: 12px; }
+    .sb-profile-row { display: flex; align-items: center; gap: 9px; }
+    .avatar {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--pink), #8B2FC7);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; font-weight: 700; color: #fff; flex-shrink: 0;
+    }
+    .sb-name { font-size: 12px; font-weight: 600; color: var(--text-1); }
+    .sb-co   { font-size: 9px; color: var(--text-3); font-family: var(--mono); }
+
+    /* ── MAIN ── */
+    .main { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+
+    /* TOPBAR */
+    .topbar {
+      background: var(--navy-2); border-bottom: 1px solid var(--border);
+      padding: 0 1.75rem; height: 52px;
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 20; gap: 1rem;
+    }
+    .tb-left { display: flex; align-items: center; gap: 12px; }
+    .tb-title { font-size: 14px; font-weight: 700; color: var(--text-1); }
+    .tb-tag {
+      font-family: var(--mono); font-size: 9px; letter-spacing: .07em;
+      background: var(--teal-dim); color: var(--teal);
+      padding: 3px 9px; border-radius: 20px; border: 1px solid rgba(0,212,170,.18);
+    }
+    .tb-right { display: flex; align-items: center; gap: 7px; }
+    .filter-sel {
+      background: var(--navy-3); border: 1px solid var(--border);
+      border-radius: var(--r); padding: 5px 9px;
+      font-size: 11px; font-family: var(--mono); color: var(--text-2);
+      cursor: pointer; outline: none; appearance: none;
+    }
+    .filter-sel option { background: var(--navy-3); }
+    .btn-export {
+      background: var(--navy-3); border: 1px solid var(--border-2);
+      border-radius: var(--r); padding: 6px 11px;
+      color: var(--text-2); font-size: 11px; font-family: var(--mono);
+      cursor: pointer; transition: all .15s;
+    }
+    .btn-export:hover { color: var(--text-1); background: var(--navy-4); }
+    .btn-sweep {
+      display: flex; align-items: center; gap: 7px;
+      background: var(--pink); color: #fff; border: none;
+      border-radius: var(--r); padding: 7px 16px;
+      font-size: 12px; font-weight: 700; font-family: var(--sans);
+      letter-spacing: .04em; cursor: pointer;
+      transition: background .15s, transform .1s, opacity .15s;
+    }
+    .btn-sweep:hover:not(:disabled) { background: var(--pink-soft); transform: translateY(-1px); }
+    .btn-sweep:disabled { opacity: .45; cursor: not-allowed; transform: none; }
+    .pulse-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,.8); animation: pulse 1.4s infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.65)} }
+    .btn-sweep.loading .pulse-dot { animation: spin .8s linear infinite; border-radius: 1px; }
+    @keyframes spin { to{transform:rotate(360deg)} }
+
+    /* ── CONTENT ── */
+    .content { padding: 1.5rem 1.75rem; flex: 1; max-width: 1000px; }
+
+    /* PROGRESS */
+    .prog-wrap { background: var(--navy-2); border: 1px solid var(--border); border-radius: var(--r); padding: 14px 16px; margin-bottom: 1.25rem; display: none; }
+    .prog-wrap.visible { display: block; }
+    .prog-lbl { font-family: var(--mono); font-size: 11px; color: var(--teal); margin-bottom: 8px; }
+    .prog-track { background: var(--navy-4); border-radius: 3px; height: 3px; overflow: hidden; }
+    .prog-fill  { height: 3px; border-radius: 3px; background: var(--teal); transition: width .4s ease; width: 0%; }
+
+    /* ALERT */
+    .alert-banner {
+      background: var(--amber-dim); border: 1px solid rgba(245,166,35,.22);
+      border-radius: var(--r); padding: 11px 14px;
+      display: flex; align-items: flex-start; gap: 10px;
+      margin-bottom: 1.25rem; animation: fadeup .35s ease;
+    }
+    .alert-banner.hidden { display: none; }
+    @keyframes fadeup { from{opacity:0;transform:translateY(-5px)} to{opacity:1;transform:none} }
+    .alert-circle {
+      width: 18px; height: 18px; border-radius: 50%;
+      background: var(--amber); display: flex; align-items: center; justify-content: center;
+      font-size: 9px; font-weight: 700; color: #fff; flex-shrink: 0; margin-top: 1px;
+    }
+    .alert-title { font-size: 11px; font-weight: 700; color: var(--amber); margin-bottom: 2px; font-family: var(--mono); letter-spacing: .04em; }
+    .alert-body  { font-size: 11px; color: rgba(245,166,35,.75); line-height: 1.55; }
+
+    /* ERROR */
+    .err-banner { background: var(--red-dim); border: 1px solid rgba(248,113,113,.2); border-radius: var(--r); padding: 11px 14px; margin-bottom: 1.25rem; font-size: 11px; color: var(--red); font-family: var(--mono); display: none; line-height: 1.55; }
+    .err-banner.visible { display: block; }
+
+    /* INFO BANNER */
+    .info-banner {
+      background: var(--blue-dim); border: 1px solid rgba(96,165,250,.2);
+      border-radius: var(--r); padding: 10px 14px;
+      font-size: 11px; color: var(--blue); font-family: var(--mono);
+      margin-bottom: 1.25rem; display: none; line-height: 1.55;
+    }
+    .info-banner.visible { display: block; }
+
+    /* STATS */
+    .stats-row { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 10px; margin-bottom: 1.5rem; }
+    .stat { background: var(--navy-2); border: 1px solid var(--border); border-radius: var(--r); padding: 12px 14px; }
+    .stat-lbl { font-family: var(--mono); font-size: 9px; letter-spacing: .09em; text-transform: uppercase; color: var(--text-3); margin-bottom: 5px; }
+    .stat-val { font-family: var(--mono); font-size: 24px; font-weight: 500; color: var(--text-1); line-height: 1; }
+    .stat-sub { font-size: 10px; color: var(--text-3); margin-top: 3px; }
+    .stat.accent .stat-val { color: var(--teal); }
+
+    /* SECTION HEADER */
+    .sec-hdr { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+    .sec-title { font-family: var(--mono); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; color: var(--text-3); white-space: nowrap; }
+    .sec-rule  { flex: 1; height: 1px; background: var(--border); }
+
+    /* EMPTY */
+    .empty { text-align: center; padding: 3rem 1rem; color: var(--text-3); font-family: var(--mono); font-size: 11px; display: none; }
+    .empty.visible { display: block; }
+    .empty-title { font-size: 13px; color: var(--text-2); margin-bottom: 8px; }
+
+    /* ── JOB CARDS ── */
+    .jobs-list { display: flex; flex-direction: column; gap: 10px; }
+
+    .jcard {
+      background: var(--navy-2); border: 1px solid var(--border);
+      border-radius: var(--r-lg); padding: 1.2rem 1.4rem;
+      transition: border-color .2s, transform .15s;
+      animation: fadeup .35s ease both;
+    }
+    .jcard:hover { border-color: var(--border-2); transform: translateY(-1px); }
+    .jcard.is-top    { border-color: rgba(0,212,170,.25); }
+    .jcard.is-closed { opacity: .5; }
+    .jcard.is-saved  { border-color: rgba(232,36,92,.25); }
+    .jcard.is-live   { }
+
+    .jcard:nth-child(1){animation-delay:.03s}
+    .jcard:nth-child(2){animation-delay:.07s}
+    .jcard:nth-child(3){animation-delay:.11s}
+    .jcard:nth-child(4){animation-delay:.15s}
+    .jcard:nth-child(5){animation-delay:.19s}
+    .jcard:nth-child(6){animation-delay:.23s}
+
+    .card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; margin-bottom: 10px; }
+    .card-meta { flex: 1; min-width: 0; }
+    .card-labels { display: flex; align-items: center; gap: 5px; margin-bottom: 5px; flex-wrap: wrap; }
+    .lbl {
+      font-family: var(--mono); font-size: 9px; letter-spacing: .06em;
+      padding: 2px 8px; border-radius: 4px; border: 1px solid;
+    }
+    .lbl-top    { background: var(--teal-dim);  color: var(--teal);       border-color: rgba(0,212,170,.18); }
+    .lbl-alert  { background: var(--amber-dim); color: var(--amber);      border-color: rgba(245,166,35,.22); }
+    .lbl-closed { background: var(--red-dim);   color: var(--red);        border-color: rgba(248,113,113,.2); }
+    .lbl-live   { background: var(--blue-dim);  color: var(--blue);       border-color: rgba(96,165,250,.18); }
+    .lbl-saved  { background: var(--pink-dim);  color: var(--pink-soft);  border-color: rgba(232,36,92,.2); }
+
+    .card-co   { font-family: var(--mono); font-size: 10px; color: var(--text-3); margin-bottom: 3px; }
+    .card-role { font-size: 15px; font-weight: 700; color: var(--text-1); line-height: 1.25; }
+
+    /* Score block */
+    .score-blk { text-align: right; flex-shrink: 0; }
+    .score-num { font-family: var(--mono); font-size: 28px; font-weight: 500; line-height: 1; }
+    .score-den { font-family: var(--mono); font-size: 11px; color: var(--text-3); }
+    .score-bar { height: 3px; width: 78px; background: var(--navy-5); border-radius: 2px; margin-top: 7px; }
+    .score-fill{ height: 3px; border-radius: 2px; transition: width .6s ease; }
+    .c-teal { color: var(--teal); } .f-teal { background: var(--teal); }
+    .c-blue { color: var(--blue); } .f-blue { background: var(--blue); }
+    .c-gray { color: var(--text-2);} .f-gray { background: var(--text-2); }
+
+    /* Tags */
+    .badges { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
+    .badge  { font-family: var(--mono); font-size: 9px; padding: 2px 8px; border-radius: 4px; border: 1px solid; letter-spacing: .04em; }
+    .b-nrw  { color: var(--blue);  background: var(--blue-dim);  border-color: rgba(96,165,250,.18); }
+    .b-ai   { color: var(--teal);  background: var(--teal-dim);  border-color: rgba(0,212,170,.18); }
+    .b-warn { color: var(--amber); background: var(--amber-dim); border-color: rgba(245,166,35,.2); }
+    .b-base { color: var(--text-3);background: transparent;      border-color: var(--border-2); }
+
+    /* Info row */
+    .card-info { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 10px; font-family: var(--mono); font-size: 10px; color: var(--text-2); }
+
+    /* Why box */
+    .why-box {
+      background: var(--navy-3); border-left: 2px solid var(--navy-5);
+      padding: 9px 12px; border-radius: 0 6px 6px 0;
+      font-size: 12px; color: var(--text-2); line-height: 1.65; margin-bottom: 10px;
+    }
+    .jcard.is-top  .why-box { border-left-color: rgba(0,212,170,.35); }
+    .jcard.is-saved.why-box { border-left-color: rgba(232,36,92,.3); }
+
+    /* Score breakdown */
+    .breakdown { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
+    .bp { font-family: var(--mono); font-size: 9px; padding: 2px 8px; border-radius: 4px; background: var(--navy-3); color: var(--text-3); border: 1px solid var(--border); }
+
+    /* Card footer */
+    .card-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .foot-left { display: flex; gap: 6px; align-items: center; }
+    .btn-apply {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: var(--pink-dim); color: var(--pink-soft);
+      border: 1px solid rgba(232,36,92,.22); border-radius: var(--r);
+      padding: 6px 12px; font-family: var(--mono); font-size: 10px;
+      font-weight: 500; text-decoration: none; letter-spacing: .05em;
+      cursor: pointer; transition: all .15s;
+    }
+    .btn-apply:hover { background: var(--pink-glow); border-color: rgba(232,36,92,.4); }
+    .btn-apply.teal { background: var(--teal-dim); color: var(--teal); border-color: rgba(0,212,170,.22); }
+    .btn-apply.teal:hover { background: rgba(0,212,170,.18); }
+    .btn-apply.disabled { opacity: .35; cursor: default; pointer-events: none; }
+    .btn-save {
+      background: var(--navy-3); border: 1px solid var(--border-2);
+      border-radius: var(--r); padding: 6px 10px; color: var(--text-3);
+      font-family: var(--mono); font-size: 10px; cursor: pointer; transition: all .15s;
+    }
+    .btn-save:hover  { color: var(--pink-soft); border-color: rgba(232,36,92,.3); }
+    .btn-save.saved  { color: var(--pink-soft); border-color: rgba(232,36,92,.3); background: var(--pink-dim); }
+    .card-src { font-family: var(--mono); font-size: 9px; color: var(--text-3); }
+
+    /* FOOTER */
+    .footer {
+      border-top: 1px solid var(--border); padding: .875rem 1.75rem;
+      display: flex; align-items: center; justify-content: space-between;
+      font-family: var(--mono); font-size: 9px; color: var(--text-3);
+    }
+
+    /* TOAST */
+    #toast {
+      position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%);
+      background: var(--navy-3); border: 1px solid var(--border-2);
+      border-radius: var(--r); padding: 9px 16px;
+      font-family: var(--mono); font-size: 11px; color: var(--text-2);
+      z-index: 1000; pointer-events: none; opacity: 0;
+      transition: opacity .2s; max-width: 420px; text-align: center;
+      white-space: nowrap;
+    }
+
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: var(--navy-4); border-radius: 3px; }
+  </style>
+</head>
+<body>
+<div class="app">
+
+  <!-- ═══════════ SIDEBAR ═══════════ -->
+  <aside class="sidebar">
+    <div class="logo">
+      <div class="logo-mark">
+        <div class="logo-diamond"><span>A</span></div>
+        <div>
+          <div class="logo-name">AINTORA</div>
+          <div class="logo-sub">Career Intelligence</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-lbl">Engine</div>
+      <div class="nav-item active" data-view="sweep">
+        <span class="ni-dot"></span>Intelligence Sweep
+        <span class="ni-badge" id="badge-sweep">0</span>
+      </div>
+      <div class="nav-item" data-view="saved">
+        <span class="ni-dot"></span>Saved Opportunities
+        <span class="ni-badge" id="badge-saved">0</span>
+      </div>
+      <div class="nav-item" data-view="alerts">
+        <span class="ni-dot"></span>Alerts
+        <span class="ni-badge" id="badge-alerts">0</span>
+      </div>
+    </div>
+
+    <div class="nav-section">
+      <div class="nav-lbl">Profile</div>
+      <div class="nav-item" id="nav-skills"><span class="ni-dot"></span>Skills</div>
+      <div class="nav-item" id="nav-region"><span class="ni-dot"></span>Target — NRW</div>
+      <div class="nav-item" id="nav-scoring"><span class="ni-dot"></span>Scoring Engine</div>
+    </div>
+
+    <div class="api-box">
+      <div class="api-box-title">Anthropic API Key</div>
+      <div class="api-row">
+        <input type="password" class="api-input" id="api-key-input" placeholder="sk-ant-api03-..." autocomplete="off" />
+        <button class="btn-api" id="btn-save-key">Save</button>
+      </div>
+      <div class="api-status" id="api-status">
+        <div class="api-dot none" id="api-dot"></div>
+        <span id="api-txt" style="color:var(--text-3)">No key — seed data mode</span>
+      </div>
+    </div>
+
+    <div class="sb-profile">
+      <div class="sb-profile-row">
+        <div class="avatar">M</div>
+        <div>
+          <div class="sb-name">Mohammed</div>
+          <div class="sb-co">AINTORA SYSTEMS</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ═══════════ MAIN ═══════════ -->
+  <div class="main">
+
+    <div class="topbar">
+      <div class="tb-left">
+        <span class="tb-title" id="view-title">Intelligence Sweep</span>
+        <span class="tb-tag" id="tb-tag">SEED DATA · NRW FOCUS</span>
+      </div>
+      <div class="tb-right">
+        <select class="filter-sel" id="filter-status">
+          <option value="all">All status</option>
+          <option value="open">Open only</option>
+          <option value="closed">Closed only</option>
+        </select>
+        <select class="filter-sel" id="sort-by">
+          <option value="score">Sort: Score ↓</option>
+          <option value="company">Sort: A–Z</option>
+          <option value="salary">Sort: Salary ↓</option>
+        </select>
+        <button class="btn-export" id="btn-export" title="Export sweep as JSON">↓ Export</button>
+        <button class="btn-sweep" id="btn-sweep">
+          <div class="pulse-dot"></div>Run Sweep
+        </button>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <div class="prog-wrap" id="prog-wrap">
+        <div class="prog-lbl" id="prog-lbl">Initializing sweep…</div>
+        <div class="prog-track"><div class="prog-fill" id="prog-fill"></div></div>
+      </div>
+
+      <div class="err-banner"  id="err-banner"></div>
+      <div class="info-banner" id="info-banner"></div>
+
+      <div class="alert-banner hidden" id="alert-banner">
+        <div class="alert-circle">!</div>
+        <div>
+          <div class="alert-title" id="alert-title">HIGH-VALUE ALERT</div>
+          <div class="alert-body"  id="alert-body"></div>
+        </div>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat">
+          <div class="stat-lbl">Verified listings</div>
+          <div class="stat-val" id="s-total">—</div>
+          <div class="stat-sub">Score ≥ 70</div>
+        </div>
+        <div class="stat">
+          <div class="stat-lbl">NRW confirmed</div>
+          <div class="stat-val" id="s-nrw">—</div>
+          <div class="stat-sub">Priority region</div>
+        </div>
+        <div class="stat accent">
+          <div class="stat-lbl">Top score</div>
+          <div class="stat-val" id="s-top">—</div>
+          <div class="stat-sub" id="s-top-sub">—</div>
+        </div>
+        <div class="stat">
+          <div class="stat-lbl">Open now</div>
+          <div class="stat-val" id="s-open">—</div>
+          <div class="stat-sub">Accepting apps</div>
+        </div>
+      </div>
+
+      <div class="sec-hdr">
+        <span class="sec-title" id="sec-title">Ranked opportunities</span>
+        <div class="sec-rule"></div>
+        <span class="sec-title" id="sec-right">Score ≥ 70 only</span>
+      </div>
+
+      <div class="empty" id="empty-state">
+        <div class="empty-title">No opportunities found</div>
+        <div>Adjust filters or run a new live sweep.</div>
+      </div>
+
+      <div class="jobs-list" id="jobs-list"></div>
+
+    </div>
+
+    <div class="footer">
+      <span>AINTORA SYSTEMS · Career Intelligence Engine v1.0 · <span id="ft-src">Seed data</span></span>
+      <span id="ft-date">Sweep: —</span>
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+/* ────────────────────────────────────────────────────────────
+   STATE
+──────────────────────────────────────────────────────────── */
+const S = {
+  view: 'sweep',
+  sweepData: null,
+  savedIds: new Set(),
+  filterStatus: 'all',
+  sortBy: 'score',
+};
+
+/* ────────────────────────────────────────────────────────────
+   BOOT
+──────────────────────────────────────────────────────────── */
+function boot() {
+  S.sweepData = engine.getSeedData();
+  renderAll();
+
+  document.getElementById('btn-sweep').addEventListener('click', handleSweep);
+  document.getElementById('btn-export').addEventListener('click', () => {
+    if (S.sweepData) { engine.exportJSON(S.sweepData); toast('Exported JSON'); }
+  });
+  document.getElementById('btn-save-key').addEventListener('click', saveKey);
+  document.getElementById('api-key-input').addEventListener('keydown', e => { if (e.key === 'Enter') saveKey(); });
+  document.getElementById('filter-status').addEventListener('change', e => { S.filterStatus = e.target.value; renderJobs(); });
+  document.getElementById('sort-by').addEventListener('change', e => { S.sortBy = e.target.value; renderJobs(); });
+
+  document.querySelectorAll('[data-view]').forEach(el =>
+    el.addEventListener('click', () => switchView(el.dataset.view))
+  );
+
+  document.getElementById('nav-skills').addEventListener('click', () =>
+    toast('Skills: ' + AINTORA_CONFIG.user.skills.join(' · '))
+  );
+  document.getElementById('nav-region').addEventListener('click', () =>
+    toast('Target: Düsseldorf · Köln · Dortmund · Münster · Bonn · Ruhr area')
+  );
+  document.getElementById('nav-scoring').addEventListener('click', () =>
+    toast('Scoring: Skill 40 + AI 20 + Salary 15 + NRW 10 + Foreign-friendly 15 = 100')
+  );
+}
+
+/* ────────────────────────────────────────────────────────────
+   API KEY
+──────────────────────────────────────────────────────────── */
+function saveKey() {
+  const val = document.getElementById('api-key-input').value.trim();
+  engine.setApiKey(val);
+  const ok = engine.hasApiKey();
+  document.getElementById('api-dot').className = 'api-dot ' + (ok ? 'ok' : 'none');
+  document.getElementById('api-txt').textContent = ok ? 'Key saved — ready for live sweep' : 'No key — seed data mode';
+  document.getElementById('api-txt').style.color = ok ? 'var(--teal)' : 'var(--text-3)';
+  toast(ok ? 'API key saved. Click Run Sweep for live data.' : 'Key cleared.');
+}
+
+/* ────────────────────────────────────────────────────────────
+   SWEEP
+──────────────────────────────────────────────────────────── */
+async function handleSweep() {
+  const btn = document.getElementById('btn-sweep');
+  const errEl  = document.getElementById('err-banner');
+  const infoEl = document.getElementById('info-banner');
+
+  errEl.classList.remove('visible');
+  infoEl.classList.remove('visible');
+
+  if (!engine.hasApiKey()) {
+    errEl.textContent = '⚠ No API key set. Enter your Anthropic API key in the sidebar to run a live intelligence sweep.';
+    errEl.classList.add('visible');
+    return;
+  }
+
+  btn.disabled = true;
+  btn.classList.add('loading');
+  setProgress('Initializing intelligence sweep…', 5);
+  document.getElementById('prog-wrap').classList.add('visible');
+
+  try {
+    const result = await engine.runSweep((msg, pct) => setProgress(msg, pct));
+    S.sweepData = result;
+    S.view = 'sweep';
+
+    infoEl.textContent = `✓ Live sweep complete — ${result.opportunities.length} verified opportunities found and ranked.`;
+    infoEl.classList.add('visible');
+    setTimeout(() => infoEl.classList.remove('visible'), 5000);
+
+    renderAll();
+  } catch (err) {
+    errEl.textContent = '⚠ ' + (err.message || 'Sweep failed. Check API key and network.');
+    errEl.classList.add('visible');
+  } finally {
+    btn.disabled = false;
+    btn.classList.remove('loading');
+    setTimeout(() => document.getElementById('prog-wrap').classList.remove('visible'), 1400);
+  }
+}
+
+function setProgress(msg, pct) {
+  document.getElementById('prog-lbl').textContent = msg;
+  document.getElementById('prog-fill').style.width = pct + '%';
+}
+
+/* ────────────────────────────────────────────────────────────
+   SAVE / UNSAVE
+──────────────────────────────────────────────────────────── */
+function toggleSave(id) {
+  S.savedIds.has(id) ? S.savedIds.delete(id) : S.savedIds.add(id);
+  document.getElementById('badge-saved').textContent = S.savedIds.size;
+  const btn = document.querySelector(`[data-save-id="${CSS.escape(id)}"]`);
+  if (btn) {
+    const saved = S.savedIds.has(id);
+    btn.textContent = saved ? '★ Saved' : '☆ Save';
+    btn.classList.toggle('saved', saved);
+  }
+  // Update badge-alerts
+  updateAlertBadge();
+  if (S.view === 'saved' || S.view === 'alerts') renderJobs();
+}
+
+function updateAlertBadge() {
+  const all = S.sweepData?.opportunities || [];
+  document.getElementById('badge-alerts').textContent = all.filter(o => o.alert).length;
+}
+
+/* ────────────────────────────────────────────────────────────
+   VIEW SWITCH
+──────────────────────────────────────────────────────────── */
+function switchView(view) {
+  S.view = view;
+  document.querySelectorAll('[data-view]').forEach(el =>
+    el.classList.toggle('active', el.dataset.view === view)
+  );
+  renderAll();
+}
+
+/* ────────────────────────────────────────────────────────────
+   RENDER ALL
+──────────────────────────────────────────────────────────── */
+function renderAll() {
+  renderStats();
+  renderAlert();
+  renderJobs();
+  renderMeta();
+  updateAlertBadge();
+}
+
+function renderStats() {
+  const all  = S.sweepData?.opportunities || [];
+  const nrw  = all.filter(o => (o.tags||[]).some(t => t.toLowerCase().includes('nrw'))).length;
+  const open = all.filter(o => o.status === 'open').length;
+  const top  = all.length ? all.reduce((a,b) => b.scores.total > a.scores.total ? b : a) : null;
+
+  document.getElementById('s-total').textContent = all.length;
+  document.getElementById('s-nrw').textContent   = nrw;
+  document.getElementById('s-open').textContent  = open;
+  document.getElementById('s-top').textContent   = top ? top.scores.total : '—';
+  document.getElementById('s-top-sub').textContent = top ? top.company.split('—')[0].trim().slice(0,20) : '—';
+  document.getElementById('badge-sweep').textContent = all.length;
+}
+
+function renderAlert() {
+  const alerts = (S.sweepData?.opportunities || []).filter(o => o.alert);
+  const el = document.getElementById('alert-banner');
+  if (!alerts.length) { el.classList.add('hidden'); return; }
+  el.classList.remove('hidden');
+  const t = alerts[0];
+  document.getElementById('alert-title').textContent = `HIGH-VALUE ALERT — Score ${t.scores.total}/100`;
+  document.getElementById('alert-body').textContent =
+    `${t.company} · ${t.position} · ${t.location}` +
+    (t.tags?.length ? ' · ' + t.tags.slice(0,3).join(' · ') : '');
+}
+
+function renderJobs() {
+  const listEl  = document.getElementById('jobs-list');
+  const emptyEl = document.getElementById('empty-state');
+  let opps = S.sweepData?.opportunities || [];
+
+  // View filter
+  if (S.view === 'saved') {
+    opps = opps.filter(o => S.savedIds.has(o.id));
+    document.getElementById('view-title').textContent = 'Saved Opportunities';
+    document.getElementById('sec-title').textContent  = 'Saved listings';
+  } else if (S.view === 'alerts') {
+    opps = opps.filter(o => o.alert);
+    document.getElementById('view-title').textContent = 'Alerts';
+    document.getElementById('sec-title').textContent  = 'Score ≥ 80 alerts';
+  } else {
+    document.getElementById('view-title').textContent = 'Intelligence Sweep';
+    document.getElementById('sec-title').textContent  = 'Ranked opportunities';
+  }
+
+  // Status filter
+  if (S.filterStatus !== 'all') {
+    opps = opps.filter(o => o.status === S.filterStatus);
+  }
+
+  // Sort
+  opps = [...opps];
+  if (S.sortBy === 'score')   opps.sort((a,b) => b.scores.total - a.scores.total);
+  if (S.sortBy === 'company') opps.sort((a,b) => a.company.localeCompare(b.company));
+  if (S.sortBy === 'salary')  opps.sort((a,b) => b.scores.salary_potential - a.scores.salary_potential);
+
+  if (!opps.length) {
+    listEl.innerHTML = '';
+    emptyEl.classList.add('visible');
+    return;
+  }
+  emptyEl.classList.remove('visible');
+  listEl.innerHTML = opps.map(renderCard).join('');
+  listEl.querySelectorAll('[data-save-id]').forEach(btn =>
+    btn.addEventListener('click', () => toggleSave(btn.dataset.saveId))
+  );
+}
+
+function renderMeta() {
+  const d = S.sweepData;
+  const live = d?._source === 'live';
+  document.getElementById('tb-tag').textContent   = live ? `LIVE SWEEP · ${d.sweep_date}` : `SEED DATA · ${d.sweep_date}`;
+  document.getElementById('sec-right').textContent = live ? 'Live data · score ≥ 70' : 'Seed data · score ≥ 70';
+  document.getElementById('ft-src').textContent   = live ? 'Live data' : 'Seed data';
+  document.getElementById('ft-date').textContent  = `Sweep: ${d?.sweep_date || '—'}${live ? ' (live)' : ' (cached)'}`;
+}
+
+/* ────────────────────────────────────────────────────────────
+   RENDER CARD
+──────────────────────────────────────────────────────────── */
+function renderCard(o) {
+  const sc     = o.scores;
+  const isTop  = sc.total >= 85;
+  const isSaved= S.savedIds.has(o.id);
+  const isLive = !!o._live;
+
+  let cc = 'jcard';
+  if (isTop)           cc += ' is-top';
+  if (o.status==='closed') cc += ' is-closed';
+  if (isSaved)         cc += ' is-saved';
+
+  // Score color
+  let cn='c-gray', fn='f-gray';
+  if (sc.total>=85){ cn='c-teal'; fn='f-teal'; }
+  else if (sc.total>=75){ cn='c-blue'; fn='f-blue'; }
+
+  // Labels
+  let lbls = '';
+  if (isTop)              lbls += '<span class="lbl lbl-top">TOP MATCH</span>';
+  if (o.alert)            lbls += '<span class="lbl lbl-alert">ALERT ≥80</span>';
+  if (o.status==='closed') lbls += '<span class="lbl lbl-closed">CLOSED</span>';
+  if (isLive)             lbls += '<span class="lbl lbl-live">LIVE</span>';
+  if (isSaved)            lbls += '<span class="lbl lbl-saved">SAVED</span>';
+
+  // Badges
+  const bdgs = (o.tags||[]).map(t => {
+    const l = t.toLowerCase();
+    const bc= l.includes('nrw')   ? 'b-nrw'
+            : (l.includes('ai')||l.includes('data')||l.includes('ki')) ? 'b-ai'
+            : l.includes('divers')||l.includes('charta')||l.includes('alert') ? 'b-warn'
+            : 'b-base';
+    return `<span class="badge ${bc}">${esc(t)}</span>`;
+  }).join('');
+
+  const hasUrl = o.apply_url && o.apply_url !== '#';
+  const applyBtn = hasUrl
+    ? `<a class="btn-apply ${isTop?'teal':''}" href="${esc(o.apply_url)}" target="_blank" rel="noopener">Apply → ↗</a>`
+    : `<span class="btn-apply disabled">No link</span>`;
+
+  return `
+<div class="${cc}">
+  <div class="card-top">
+    <div class="card-meta">
+      ${lbls ? `<div class="card-labels">${lbls}</div>` : ''}
+      <div class="card-co">${esc(o.company)}</div>
+      <div class="card-role">${esc(o.position)}</div>
+    </div>
+    <div class="score-blk">
+      <div class="score-num ${cn}">${sc.total}</div>
+      <div class="score-den">/100</div>
+      <div class="score-bar"><div class="score-fill ${fn}" style="width:${sc.total}%"></div></div>
+    </div>
+  </div>
+  ${bdgs ? `<div class="badges">${bdgs}</div>` : ''}
+  <div class="card-info">
+    <span>📍 ${esc(o.location)}</span>
+    <span>💰 ${esc(o.salary)}</span>
+    <span>🗓 ${esc(o.start_date)}</span>
+    <span>${o.status==='open'?'🟢 Open':'🔴 Closed'} · ${esc(o.deadline)}</span>
+  </div>
+  <div class="why-box">${esc(o.why_match)}</div>
+  <div class="breakdown">
+    <span class="bp">Skill: ${sc.skill_match}/40</span>
+    <span class="bp">AI/IT: ${sc.ai_relevance}/20</span>
+    <span class="bp">Salary: ${sc.salary_potential}/15</span>
+    <span class="bp">NRW: ${sc.nrw}/10</span>
+    <span class="bp">Foreign-friendly: ${sc.foreign_friendly}/15</span>
+  </div>
+  <div class="card-foot">
+    <div class="foot-left">
+      ${applyBtn}
+      <button class="btn-save ${isSaved?'saved':''}" data-save-id="${esc(o.id)}">${isSaved?'★ Saved':'☆ Save'}</button>
+    </div>
+    <span class="card-src">via ${esc(o.source||'web')}</span>
+  </div>
+</div>`;
+}
+
+/* ────────────────────────────────────────────────────────────
+   UTILS
+──────────────────────────────────────────────────────────── */
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+let _tTimeout;
+function toast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.style.opacity = '1';
+  clearTimeout(_tTimeout);
+  _tTimeout = setTimeout(() => el.style.opacity = '0', 3000);
+}
+
+document.addEventListener('DOMContentLoaded', boot);
+</script>
+</body>
 </html>
