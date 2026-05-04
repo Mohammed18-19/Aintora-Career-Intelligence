@@ -5,12 +5,41 @@
 
 ## Overview
 
-A standalone, multi-file AI-powered job intelligence dashboard for discovering, scoring, and tracking Ausbildung opportunities in Germany — with NRW (North Rhine-Westphalia) as top priority.
+A standalone, AI-powered job intelligence dashboard for discovering, scoring, and tracking
+Ausbildung opportunities in Germany — NRW (North Rhine-Westphalia) as top priority.
 
 **No server required. Open `index.html` in any browser.**
 
-With an Anthropic API key: live AI sweeps via Claude + web_search.
-Without a key: instant seed data mode with 5 pre-ranked opportunities.
+---
+
+## API Key — Google Gemini (Free)
+
+This project uses **Google Gemini 2.0 Flash** with Google Search grounding for live sweeps.
+
+### How to get your free Gemini API key
+
+1. Go to [aistudio.google.com/apikey](https://aistudio.google.com/apikey)
+2. Sign in with your Google account
+3. Click **Create API Key**
+4. Copy the key (starts with `AIza...`)
+
+> **Free tier is enough** — Gemini 2.0 Flash has a generous free quota (15 req/min, 1500 req/day).
+> No credit card required.
+
+### Without a key
+
+The dashboard works immediately in **seed data mode** — 5 pre-ranked opportunities are shown
+on first load with no key needed.
+
+---
+
+## How to Run a Live Sweep
+
+1. Open `index.html` in your browser (or `python3 -m http.server 3000` and go to `localhost:3000`)
+2. Paste your Gemini key (`AIza...`) into the **Gemini API Key** field in the sidebar
+3. Click **Save**
+4. Click **Run Sweep**
+5. Results are scored, ranked, filtered, and rendered automatically
 
 ---
 
@@ -18,40 +47,11 @@ Without a key: instant seed data mode with 5 pre-ranked opportunities.
 
 ```
 ausbildung-hunter/
-├── index.html        ← Full SPA dashboard (open this)
-├── config.js         ← User profile, scoring weights, seed data, system prompt
-├── engine.js         ← AI sweep engine (API calls, parsing, scoring, export)
-└── README.md         ← This file
+├── index.html    ← Full SPA dashboard (open this)
+├── config.js     ← User profile, scoring weights, seed data, system prompt
+├── engine.js     ← Gemini sweep engine (API calls, parsing, scoring, export)
+└── README.md     ← This file
 ```
-
----
-
-## Features
-
-| Feature | Status |
-|---------|--------|
-| Live AI sweep (Anthropic API + web_search) | ✅ |
-| Seed data mode (no API key needed) | ✅ |
-| 100-point scoring engine | ✅ |
-| Score ≥ 70 filter | ✅ |
-| Alert system (score ≥ 80) | ✅ |
-| Save / unsave opportunities | ✅ |
-| Views: Sweep · Saved · Alerts | ✅ |
-| Filter: open/closed | ✅ |
-| Sort: score / A–Z / salary | ✅ |
-| JSON export | ✅ |
-| Progress bar with live status | ✅ |
-| API key management (sidebar) | ✅ |
-
----
-
-## How to Run a Live Sweep
-
-1. Open `index.html` in your browser
-2. Enter your Anthropic API key in the sidebar (sk-ant-...)
-3. Click **Run Sweep**
-4. The engine calls Claude with `web_search` tool enabled
-5. Results are scored, ranked, filtered, and rendered automatically
 
 ---
 
@@ -69,18 +69,21 @@ ausbildung-hunter/
 
 ---
 
-## User Profile (config.js)
+## Features
 
-```js
-AINTORA_CONFIG.user = {
-  skills: ['Python', 'Flask', 'Django', 'PostgreSQL', 'AI agents', 'n8n', 'NestJS'],
-  targetRegion: 'NRW',
-  targetRoles: [
-    'Fachinformatiker Anwendungsentwicklung',
-    'Fachinformatiker Daten- und Prozessanalyse',
-  ],
-}
-```
+| Feature | Status |
+|---------|--------|
+| Live AI sweep (Gemini 2.0 Flash + Google Search) | ✅ |
+| Seed data mode (no API key needed) | ✅ |
+| 100-point scoring engine | ✅ |
+| Score ≥ 70 filter | ✅ |
+| Alert system (score ≥ 80) | ✅ |
+| Save / unsave opportunities | ✅ |
+| Views: Sweep · Saved · Alerts | ✅ |
+| Filter: open / closed | ✅ |
+| Sort: score / A–Z / salary | ✅ |
+| JSON export | ✅ |
+| Progress bar with live status | ✅ |
 
 ---
 
@@ -99,11 +102,10 @@ AINTORA_CONFIG.user = {
 ## Roadmap
 
 - [ ] Telegram notification bot (alert on score ≥ 80)
-- [ ] Auto-apply form prefill system
-- [ ] CV match scoring against job listings
+- [ ] Auto-apply form prefill
+- [ ] CV match scoring against listings
 - [ ] Chrome extension for real-time scraping
-- [ ] Daily digest email via n8n
-- [ ] Supabase/Firebase auth + cloud sync
+- [ ] Daily digest via n8n
 
 ---
 

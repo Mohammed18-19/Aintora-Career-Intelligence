@@ -39,9 +39,8 @@ const AINTORA_CONFIG = {
   },
 
   api: {
-    model: 'claude-sonnet-4-20250514',
-    maxTokens: 4096,
-    endpoint: 'https://api.anthropic.com/v1/messages',
+    model: 'gemini-2.0-flash',
+    endpoint: 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent',
   },
 
 };

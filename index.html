@@ -385,9 +385,9 @@
     </div>
 
     <div class="api-box">
-      <div class="api-box-title">Anthropic API Key</div>
+      <div class="api-box-title">Gemini API Key</div>
       <div class="api-row">
-        <input type="password" class="api-input" id="api-key-input" placeholder="sk-ant-api03-..." autocomplete="off" />
+        <input type="password" class="api-input" id="api-key-input" placeholder="AIza..." autocomplete="off" />
         <button class="btn-api" id="btn-save-key">Save</button>
       </div>
       <div class="api-status" id="api-status">
@@ -549,9 +549,9 @@ function saveKey() {
   engine.setApiKey(val);
   const ok = engine.hasApiKey();
   document.getElementById('api-dot').className = 'api-dot ' + (ok ? 'ok' : 'none');
-  document.getElementById('api-txt').textContent = ok ? 'Key saved — ready for live sweep' : 'No key — seed data mode';
+  document.getElementById('api-txt').textContent = ok ? 'Gemini key saved — ready to sweep' : 'No key — seed data mode';
   document.getElementById('api-txt').style.color = ok ? 'var(--teal)' : 'var(--text-3)';
-  toast(ok ? 'API key saved. Click Run Sweep for live data.' : 'Key cleared.');
+  toast(ok ? 'Gemini API key saved. Click Run Sweep.' : 'Key cleared.');
 }
 
 /* ────────────────────────────────────────────────────────────
@@ -566,7 +566,7 @@ async function handleSweep() {
   infoEl.classList.remove('visible');
 
   if (!engine.hasApiKey()) {
-    errEl.textContent = '⚠ No API key set. Enter your Anthropic API key in the sidebar to run a live intelligence sweep.';
+    errEl.textContent = '⚠ No API key set. Enter your Gemini API key in the sidebar to run a live intelligence sweep.';
     errEl.classList.add('visible');
     return;
   }
