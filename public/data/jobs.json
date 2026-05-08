@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-05-07T08:46:14.468055+00:00",
+  "scraped_at": "2026-05-08T07:49:59.691378+00:00",
   "total_fields": 12,
   "failed": [],
   "status": "success",
@@ -8,26 +8,26 @@
       "id": 3,
       "name": "Mechatroniker",
       "demand_score": 100,
-      "total_listings": 5854,
-      "ba_listings": 5854,
+      "total_listings": 5858,
+      "ba_listings": 5858,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
-        "Wittstock/Dosse",
-        "Neckartenzlingen",
-        "Neu-Ulm",
-        "Gerstungen",
-        "Jandelsbrunn"
+        "Rheinstetten, Baden",
+        "Georgsmarienhütte",
+        "Versmold",
+        "Tornesch",
+        "Frechen"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-07T08:42:58.807524+00:00"
+      "scraped_at": "2026-05-08T07:48:48.474895+00:00"
     },
     {
       "id": 4,
       "name": "Elektroniker",
       "demand_score": 100,
-      "total_listings": 7254,
-      "ba_listings": 7254,
+      "total_listings": 7238,
+      "ba_listings": 7238,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -38,85 +38,86 @@
         "Herzogenaurach"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-07T08:43:19.913832+00:00"
+      "scraped_at": "2026-05-08T07:48:56.690761+00:00"
     },
     {
       "id": 6,
       "name": "Fachkraft Lagerlogistik",
       "demand_score": 100,
-      "total_listings": 7219,
-      "ba_listings": 7219,
+      "total_listings": 7223,
+      "ba_listings": 7223,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
-        "Jandelsbrunn",
-        "Ingolstadt, Donau",
-        "Weil der Stadt",
-        "Heddesheim, Baden",
-        "Wiesbaden"
+        "Hartenstein bei Zwickau",
+        "Saerbeck",
+        "Berlin",
+        "Offenburg",
+        "Rheinstetten, Baden"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-07T08:44:04.201101+00:00"
+      "scraped_at": "2026-05-08T07:49:12.273283+00:00"
     },
     {
       "id": 1,
       "name": "Pflegefachmann",
       "demand_score": 91,
-      "total_listings": 4563,
-      "ba_listings": 4563,
+      "total_listings": 4553,
+      "ba_listings": 4553,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
         "Rechberghausen",
-        "Lörrach",
-        "Lohr am Main",
-        "Marne, Holstein",
-        "Göppingen"
+        "Aschendorf, Stadt Papenburg",
+        "Duisburg",
+        "Dortmund",
+        "Essen, Ruhr"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-07T08:42:13.369837+00:00"
+      "scraped_at": "2026-05-08T07:48:33.843191+00:00"
     },
     {
       "id": 8,
       "name": "Kfz-Mechatroniker",
-      "demand_score": 75,
-      "total_listings": 3772,
-      "ba_listings": 3772,
+      "demand_score": 74,
+      "total_listings": 3746,
+      "ba_listings": 3746,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
-        "Kirchseeon",
-        "Castrop-Rauxel",
-        "Thannhausen, Schwaben",
+        "Bramsche, Hase",
         "Rottenburg am Neckar",
-        "Lage, Lippe"
+        "Lage, Lippe",
+        "Marburg",
+        "Freiburg im Breisgau"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-07T08:44:46.922373+00:00"
+      "scraped_at": "2026-05-08T07:49:28.051467+00:00"
     },
     {
       "id": 5,
       "name": "Industriemechaniker",
       "demand_score": 63,
-      "total_listings": 3167,
-      "ba_listings": 3167,
+      "total_listings": 3172,
+      "ba_listings": 3172,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
-        "Neu-Ulm",
-        "Arzberg, Oberfranken",
-        "Lingen (Ems)",
-        "Losheim am See"
+        "Bebra",
+        "Karlsruhe, Baden",
+        "Selmsdorf",
+        "Bramsche, Hase",
+        "Coswig bei Dresden"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-07T08:43:42.642326+00:00"
+      "scraped_at": "2026-05-08T07:49:05.011454+00:00"
     },
     {
       "id": 2,
       "name": "Fachinformatiker",
       "demand_score": 58,
-      "total_listings": 2907,
-      "ba_listings": 2907,
+      "total_listings": 2905,
+      "ba_listings": 2905,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -127,14 +128,14 @@
         "Moers"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-07T08:42:36.073427+00:00"
+      "scraped_at": "2026-05-08T07:48:41.195402+00:00"
     },
     {
       "id": 10,
       "name": "Bau / Maurer",
       "demand_score": 38,
-      "total_listings": 1931,
-      "ba_listings": 1931,
+      "total_listings": 1934,
+      "ba_listings": 1934,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -145,14 +146,14 @@
         "Coswig bei Dresden"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-07T08:45:32.081542+00:00"
+      "scraped_at": "2026-05-08T07:49:43.867721+00:00"
     },
     {
       "id": 9,
       "name": "Hotelfachmann",
       "demand_score": 25,
-      "total_listings": 1257,
-      "ba_listings": 1257,
+      "total_listings": 1260,
+      "ba_listings": 1260,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -163,7 +164,7 @@
         "Dobbin-Linstow"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-07T08:45:08.781699+00:00"
+      "scraped_at": "2026-05-08T07:49:35.864775+00:00"
     },
     {
       "id": 11,
@@ -174,21 +175,21 @@
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
+        "Leipzig",
         "Breitenworbis",
         "Bremerhaven",
         "Plauen, Vogtland",
-        "Werra-Suhl-Tal",
-        "Bremen"
+        "Werra-Suhl-Tal"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-07T08:45:52.730514+00:00"
+      "scraped_at": "2026-05-08T07:49:51.088004+00:00"
     },
     {
       "id": 7,
       "name": "Altenpflege",
       "demand_score": 10,
-      "total_listings": 421,
-      "ba_listings": 421,
+      "total_listings": 414,
+      "ba_listings": 414,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -199,14 +200,14 @@
         "Herne, Westfalen"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-07T08:44:25.357207+00:00"
+      "scraped_at": "2026-05-08T07:49:20.699765+00:00"
     },
     {
       "id": 12,
       "name": "Bauzeichner",
       "demand_score": 10,
-      "total_listings": 394,
-      "ba_listings": 394,
+      "total_listings": 393,
+      "ba_listings": 393,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -217,7 +218,7 @@
         "Hagen, Westfalen"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-07T08:46:14.467936+00:00"
+      "scraped_at": "2026-05-08T07:49:59.691049+00:00"
     }
   ]
 }
