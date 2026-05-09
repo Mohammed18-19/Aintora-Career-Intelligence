@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-05-08T07:49:59.691378+00:00",
+  "scraped_at": "2026-05-09T08:04:10.360475+00:00",
   "total_fields": 12,
   "failed": [],
   "status": "success",
@@ -8,8 +8,8 @@
       "id": 3,
       "name": "Mechatroniker",
       "demand_score": 100,
-      "total_listings": 5858,
-      "ba_listings": 5858,
+      "total_listings": 5846,
+      "ba_listings": 5846,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -20,86 +20,86 @@
         "Frechen"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-08T07:48:48.474895+00:00"
+      "scraped_at": "2026-05-09T08:02:55.037599+00:00"
     },
     {
       "id": 4,
       "name": "Elektroniker",
       "demand_score": 100,
-      "total_listings": 7238,
-      "ba_listings": 7238,
+      "total_listings": 7221,
+      "ba_listings": 7221,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
         "Marsberg, Sauerland",
         "Ludwigshafen am Rhein",
         "Merseburg",
-        "Höchstadt an der Aisch",
-        "Herzogenaurach"
+        "Ochsenfurt, Unterfranken",
+        "Höchstadt an der Aisch"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-08T07:48:56.690761+00:00"
+      "scraped_at": "2026-05-09T08:03:03.199711+00:00"
     },
     {
       "id": 6,
       "name": "Fachkraft Lagerlogistik",
       "demand_score": 100,
-      "total_listings": 7223,
-      "ba_listings": 7223,
+      "total_listings": 7213,
+      "ba_listings": 7213,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
+        "Celle",
         "Hartenstein bei Zwickau",
         "Saerbeck",
         "Berlin",
-        "Offenburg",
-        "Rheinstetten, Baden"
+        "Offenburg"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-08T07:49:12.273283+00:00"
+      "scraped_at": "2026-05-09T08:03:20.904404+00:00"
     },
     {
       "id": 1,
       "name": "Pflegefachmann",
       "demand_score": 91,
-      "total_listings": 4553,
-      "ba_listings": 4553,
+      "total_listings": 4568,
+      "ba_listings": 4568,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
         "Rechberghausen",
-        "Aschendorf, Stadt Papenburg",
-        "Duisburg",
-        "Dortmund",
-        "Essen, Ruhr"
+        "Marne, Holstein",
+        "Göppingen",
+        "Berlin",
+        "Aschendorf, Stadt Papenburg"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-08T07:48:33.843191+00:00"
+      "scraped_at": "2026-05-09T08:02:36.749869+00:00"
     },
     {
       "id": 8,
       "name": "Kfz-Mechatroniker",
       "demand_score": 74,
-      "total_listings": 3746,
-      "ba_listings": 3746,
+      "total_listings": 3735,
+      "ba_listings": 3735,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
-        "Bramsche, Hase",
         "Rottenburg am Neckar",
         "Lage, Lippe",
         "Marburg",
-        "Freiburg im Breisgau"
+        "Freiburg im Breisgau",
+        "Celle"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-08T07:49:28.051467+00:00"
+      "scraped_at": "2026-05-09T08:03:38.518698+00:00"
     },
     {
       "id": 5,
       "name": "Industriemechaniker",
       "demand_score": 63,
-      "total_listings": 3172,
-      "ba_listings": 3172,
+      "total_listings": 3164,
+      "ba_listings": 3164,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -110,14 +110,14 @@
         "Coswig bei Dresden"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-08T07:49:05.011454+00:00"
+      "scraped_at": "2026-05-09T08:03:11.855683+00:00"
     },
     {
       "id": 2,
       "name": "Fachinformatiker",
       "demand_score": 58,
-      "total_listings": 2905,
-      "ba_listings": 2905,
+      "total_listings": 2904,
+      "ba_listings": 2904,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -128,7 +128,7 @@
         "Moers"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-08T07:48:41.195402+00:00"
+      "scraped_at": "2026-05-09T08:02:45.010748+00:00"
     },
     {
       "id": 10,
@@ -146,14 +146,14 @@
         "Coswig bei Dresden"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-08T07:49:43.867721+00:00"
+      "scraped_at": "2026-05-09T08:03:52.904376+00:00"
     },
     {
       "id": 9,
       "name": "Hotelfachmann",
       "demand_score": 25,
-      "total_listings": 1260,
-      "ba_listings": 1260,
+      "total_listings": 1257,
+      "ba_listings": 1257,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -164,14 +164,14 @@
         "Dobbin-Linstow"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-08T07:49:35.864775+00:00"
+      "scraped_at": "2026-05-09T08:03:46.162310+00:00"
     },
     {
       "id": 11,
       "name": "Tiefbaufacharbeiter",
       "demand_score": 23,
-      "total_listings": 1193,
-      "ba_listings": 1193,
+      "total_listings": 1189,
+      "ba_listings": 1189,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -182,14 +182,14 @@
         "Werra-Suhl-Tal"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-08T07:49:51.088004+00:00"
+      "scraped_at": "2026-05-09T08:04:02.131782+00:00"
     },
     {
       "id": 7,
       "name": "Altenpflege",
       "demand_score": 10,
-      "total_listings": 414,
-      "ba_listings": 414,
+      "total_listings": 415,
+      "ba_listings": 415,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -200,14 +200,14 @@
         "Herne, Westfalen"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-08T07:49:20.699765+00:00"
+      "scraped_at": "2026-05-09T08:03:30.623522+00:00"
     },
     {
       "id": 12,
       "name": "Bauzeichner",
       "demand_score": 10,
-      "total_listings": 393,
-      "ba_listings": 393,
+      "total_listings": 394,
+      "ba_listings": 394,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -218,7 +218,7 @@
         "Hagen, Westfalen"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-08T07:49:59.691049+00:00"
+      "scraped_at": "2026-05-09T08:04:10.360181+00:00"
     }
   ]
 }
