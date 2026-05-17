@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-05-16T08:14:40.236905+00:00",
+  "scraped_at": "2026-05-17T08:28:46.808763+00:00",
   "total_fields": 12,
   "failed": [],
   "status": "success",
@@ -8,8 +8,8 @@
       "id": 3,
       "name": "Mechatroniker",
       "demand_score": 100,
-      "total_listings": 5741,
-      "ba_listings": 5741,
+      "total_listings": 5719,
+      "ba_listings": 5719,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -20,14 +20,14 @@
         "Schwerin, Mecklenburg"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-16T08:11:24.312882+00:00"
+      "scraped_at": "2026-05-17T08:27:29.674700+00:00"
     },
     {
       "id": 4,
       "name": "Elektroniker",
       "demand_score": 100,
-      "total_listings": 7096,
-      "ba_listings": 7096,
+      "total_listings": 7068,
+      "ba_listings": 7068,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -38,32 +38,32 @@
         "Neuruppin"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-16T08:11:46.452829+00:00"
+      "scraped_at": "2026-05-17T08:27:38.011626+00:00"
     },
     {
       "id": 6,
       "name": "Fachkraft Lagerlogistik",
       "demand_score": 100,
-      "total_listings": 7093,
-      "ba_listings": 7093,
+      "total_listings": 7067,
+      "ba_listings": 7067,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
+        "Kassel, Hessen",
         "Würselen",
         "Rastatt",
         "Ellhofen, Württemberg",
-        "Heddesheim, Baden",
-        "Offenburg"
+        "Heddesheim, Baden"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-16T08:12:29.333273+00:00"
+      "scraped_at": "2026-05-17T08:27:54.005814+00:00"
     },
     {
       "id": 1,
       "name": "Pflegefachmann",
       "demand_score": 90,
-      "total_listings": 4533,
-      "ba_listings": 4533,
+      "total_listings": 4508,
+      "ba_listings": 4508,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -74,14 +74,14 @@
         "Detmold"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-16T08:10:40.460476+00:00"
+      "scraped_at": "2026-05-17T08:27:12.275790+00:00"
     },
     {
       "id": 8,
       "name": "Kfz-Mechatroniker",
       "demand_score": 72,
-      "total_listings": 3639,
-      "ba_listings": 3639,
+      "total_listings": 3636,
+      "ba_listings": 3636,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -92,14 +92,14 @@
         "Celle"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-16T08:13:14.567158+00:00"
+      "scraped_at": "2026-05-17T08:28:12.750446+00:00"
     },
     {
       "id": 5,
       "name": "Industriemechaniker",
       "demand_score": 62,
-      "total_listings": 3128,
-      "ba_listings": 3128,
+      "total_listings": 3111,
+      "ba_listings": 3111,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -110,25 +110,25 @@
         "Bogen, Niederbayern"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-16T08:12:07.948476+00:00"
+      "scraped_at": "2026-05-17T08:27:46.635910+00:00"
     },
     {
       "id": 2,
       "name": "Fachinformatiker",
       "demand_score": 56,
-      "total_listings": 2840,
-      "ba_listings": 2840,
+      "total_listings": 2825,
+      "ba_listings": 2825,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
-        "Nürnberg, Mittelfranken",
-        "Lübeck",
         "Leinfelden-Echterdingen",
         "Sankt Augustin",
-        "Stralsund"
+        "Stralsund",
+        "Alfter",
+        "Rheda-Wiedenbrück"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-16T08:11:02.605434+00:00"
+      "scraped_at": "2026-05-17T08:27:21.372162+00:00"
     },
     {
       "id": 10,
@@ -146,14 +146,14 @@
         "Eiterfeld"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-16T08:13:56.439267+00:00"
+      "scraped_at": "2026-05-17T08:28:28.726620+00:00"
     },
     {
       "id": 9,
       "name": "Hotelfachmann",
       "demand_score": 24,
-      "total_listings": 1217,
-      "ba_listings": 1217,
+      "total_listings": 1213,
+      "ba_listings": 1213,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -164,14 +164,14 @@
         "Dobbin-Linstow"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-16T08:13:35.459065+00:00"
+      "scraped_at": "2026-05-17T08:28:20.336263+00:00"
     },
     {
       "id": 11,
       "name": "Tiefbaufacharbeiter",
       "demand_score": 23,
-      "total_listings": 1177,
-      "ba_listings": 1177,
+      "total_listings": 1175,
+      "ba_listings": 1175,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -182,7 +182,7 @@
         "Rheda-Wiedenbrück"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-16T08:14:17.801888+00:00"
+      "scraped_at": "2026-05-17T08:28:36.716886+00:00"
     },
     {
       "id": 7,
@@ -200,7 +200,7 @@
         "Herne, Westfalen"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-16T08:12:52.239875+00:00"
+      "scraped_at": "2026-05-17T08:28:03.880496+00:00"
     },
     {
       "id": 12,
@@ -218,7 +218,7 @@
         "Fulda"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-16T08:14:40.236829+00:00"
+      "scraped_at": "2026-05-17T08:28:46.808402+00:00"
     }
   ]
 }
