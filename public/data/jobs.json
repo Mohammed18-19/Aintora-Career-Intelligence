@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-05-28T10:17:41.307860+00:00",
+  "scraped_at": "2026-05-29T10:04:10.786592+00:00",
   "total_fields": 12,
   "failed": [],
   "status": "success",
@@ -8,8 +8,8 @@
       "id": 3,
       "name": "Mechatroniker",
       "demand_score": 100,
-      "total_listings": 5524,
-      "ba_listings": 5524,
+      "total_listings": 5535,
+      "ba_listings": 5535,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -20,14 +20,14 @@
         "Schwerin, Mecklenburg"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-28T10:14:32.719499+00:00"
+      "scraped_at": "2026-05-29T10:02:49.878458+00:00"
     },
     {
       "id": 4,
       "name": "Elektroniker",
       "demand_score": 100,
-      "total_listings": 6914,
-      "ba_listings": 6914,
+      "total_listings": 7049,
+      "ba_listings": 7049,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -38,67 +38,67 @@
         "Stralsund"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-28T10:14:53.246557+00:00"
+      "scraped_at": "2026-05-29T10:02:58.585552+00:00"
     },
     {
       "id": 6,
       "name": "Fachkraft Lagerlogistik",
       "demand_score": 100,
-      "total_listings": 6892,
-      "ba_listings": 6892,
+      "total_listings": 6861,
+      "ba_listings": 6861,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
+        "Worms",
+        "Ratzeburg",
+        "Hofheim in Unterfranken",
         "Rastatt",
-        "Ellhofen, Württemberg",
-        "Heddesheim, Baden",
-        "Offenburg",
-        "Selmsdorf"
+        "Ellhofen, Württemberg"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-28T10:15:35.637376+00:00"
+      "scraped_at": "2026-05-29T10:03:16.553785+00:00"
     },
     {
       "id": 1,
       "name": "Pflegefachmann",
       "demand_score": 90,
-      "total_listings": 4527,
-      "ba_listings": 4527,
+      "total_listings": 4522,
+      "ba_listings": 4522,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
+        "Aschendorf, Stadt Papenburg",
+        "Halle (Saale)",
         "Flensburg",
         "Duisburg",
-        "Eislingen/Fils",
-        "Schwerin, Mecklenburg",
-        "Bakum, Kreis Vechta"
+        "Eislingen/Fils"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-28T10:13:48.603801+00:00"
+      "scraped_at": "2026-05-29T10:02:32.211157+00:00"
     },
     {
       "id": 8,
       "name": "Kfz-Mechatroniker",
-      "demand_score": 69,
-      "total_listings": 3452,
-      "ba_listings": 3452,
+      "demand_score": 68,
+      "total_listings": 3419,
+      "ba_listings": 3419,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
         "Grimmen",
         "Esens",
         "Köln",
-        "München"
+        "Uplengen"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-28T10:16:18.815470+00:00"
+      "scraped_at": "2026-05-29T10:03:35.952656+00:00"
     },
     {
       "id": 5,
       "name": "Industriemechaniker",
       "demand_score": 61,
-      "total_listings": 3075,
-      "ba_listings": 3075,
+      "total_listings": 3089,
+      "ba_listings": 3089,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -109,14 +109,14 @@
         "Boffzen"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-28T10:15:13.522799+00:00"
+      "scraped_at": "2026-05-29T10:03:07.368150+00:00"
     },
     {
       "id": 2,
       "name": "Fachinformatiker",
-      "demand_score": 54,
-      "total_listings": 2740,
-      "ba_listings": 2740,
+      "demand_score": 55,
+      "total_listings": 2757,
+      "ba_listings": 2757,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -127,7 +127,7 @@
         "Rüsselsheim am Main"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-28T10:14:10.853945+00:00"
+      "scraped_at": "2026-05-29T10:02:41.552996+00:00"
     },
     {
       "id": 10,
@@ -144,7 +144,7 @@
         "Halbe"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-28T10:16:59.920522+00:00"
+      "scraped_at": "2026-05-29T10:03:53.797200+00:00"
     },
     {
       "id": 9,
@@ -155,21 +155,21 @@
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
+        "Andernach",
         "Bergen auf Rügen",
         "Babenhausen, Hessen",
         "Dingelstädt, Eichsfeld",
-        "Kremmen",
-        "Nauen, Havelland"
+        "Kremmen"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-28T10:16:38.879888+00:00"
+      "scraped_at": "2026-05-29T10:03:44.709389+00:00"
     },
     {
       "id": 11,
       "name": "Tiefbaufacharbeiter",
       "demand_score": 23,
-      "total_listings": 1169,
-      "ba_listings": 1169,
+      "total_listings": 1172,
+      "ba_listings": 1172,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -180,14 +180,14 @@
         "Erkelenz"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-28T10:17:20.686376+00:00"
+      "scraped_at": "2026-05-29T10:04:02.301219+00:00"
     },
     {
       "id": 7,
       "name": "Altenpflege",
       "demand_score": 10,
-      "total_listings": 409,
-      "ba_listings": 409,
+      "total_listings": 407,
+      "ba_listings": 407,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -197,14 +197,14 @@
         "Herne, Westfalen"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-28T10:15:57.159609+00:00"
+      "scraped_at": "2026-05-29T10:03:26.149208+00:00"
     },
     {
       "id": 12,
       "name": "Bauzeichner",
       "demand_score": 10,
-      "total_listings": 358,
-      "ba_listings": 358,
+      "total_listings": 361,
+      "ba_listings": 361,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -215,7 +215,7 @@
         "Fulda"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-05-28T10:17:41.307737+00:00"
+      "scraped_at": "2026-05-29T10:04:10.786225+00:00"
     }
   ]
 }
