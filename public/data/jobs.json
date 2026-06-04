@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-03T11:13:38.318217+00:00",
+  "scraped_at": "2026-06-04T10:08:03.809080+00:00",
   "total_fields": 12,
   "failed": [],
   "status": "success",
@@ -8,8 +8,8 @@
       "id": 3,
       "name": "Mechatroniker",
       "demand_score": 100,
-      "total_listings": 5455,
-      "ba_listings": 5455,
+      "total_listings": 5380,
+      "ba_listings": 5380,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -20,14 +20,14 @@
         "Herzogenaurach"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-03T11:10:22.638624+00:00"
+      "scraped_at": "2026-06-04T10:04:48.214775+00:00"
     },
     {
       "id": 4,
       "name": "Elektroniker",
       "demand_score": 100,
-      "total_listings": 6916,
-      "ba_listings": 6916,
+      "total_listings": 6781,
+      "ba_listings": 6781,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -38,85 +38,86 @@
         "Stralsund"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-03T11:10:44.130812+00:00"
+      "scraped_at": "2026-06-04T10:05:10.307621+00:00"
     },
     {
       "id": 6,
       "name": "Fachkraft Lagerlogistik",
       "demand_score": 100,
-      "total_listings": 6734,
-      "ba_listings": 6734,
+      "total_listings": 6649,
+      "ba_listings": 6649,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
-        "Kasendorf, Oberfranken",
         "Porta Westfalica",
+        "Kasendorf, Oberfranken",
         "Haren (Ems)",
         "Stuttgart",
         "Greiz"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-03T11:11:27.339391+00:00"
+      "scraped_at": "2026-06-04T10:05:53.610249+00:00"
     },
     {
       "id": 1,
       "name": "Pflegefachmann",
-      "demand_score": 88,
-      "total_listings": 4422,
-      "ba_listings": 4422,
+      "demand_score": 87,
+      "total_listings": 4395,
+      "ba_listings": 4395,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
+        "Langenhorn bei Husum, Nordsee",
         "Meiningen",
         "Aschendorf, Stadt Papenburg",
         "Flensburg",
-        "Duisburg",
-        "Eislingen/Fils"
+        "Duisburg"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-03T11:09:38.928461+00:00"
+      "scraped_at": "2026-06-04T10:04:05.937117+00:00"
     },
     {
       "id": 8,
       "name": "Kfz-Mechatroniker",
       "demand_score": 67,
-      "total_listings": 3391,
-      "ba_listings": 3391,
+      "total_listings": 3373,
+      "ba_listings": 3373,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
+        "Nienburg (Weser)",
         "Walsrode",
         "Soltau",
         "Dohna, Sachsen",
         "Haibach, Niederbayern"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-03T11:12:11.242678+00:00"
+      "scraped_at": "2026-06-04T10:06:37.875384+00:00"
     },
     {
       "id": 5,
       "name": "Industriemechaniker",
       "demand_score": 60,
-      "total_listings": 3044,
-      "ba_listings": 3044,
+      "total_listings": 3001,
+      "ba_listings": 3001,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
+        "Ludwigsfelde",
         "Neuenkirchen, Kreis Steinfurt",
         "Porta Westfalica",
         "Gera",
-        "Finning",
-        "Dormagen"
+        "Finning"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-03T11:11:05.863439+00:00"
+      "scraped_at": "2026-06-04T10:05:32.748597+00:00"
     },
     {
       "id": 2,
       "name": "Fachinformatiker",
-      "demand_score": 53,
-      "total_listings": 2658,
-      "ba_listings": 2658,
+      "demand_score": 52,
+      "total_listings": 2621,
+      "ba_listings": 2621,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -127,14 +128,14 @@
         "Sankt Augustin"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-03T11:10:01.352842+00:00"
+      "scraped_at": "2026-06-04T10:04:27.452335+00:00"
     },
     {
       "id": 10,
       "name": "Bau / Maurer",
       "demand_score": 38,
-      "total_listings": 1912,
-      "ba_listings": 1912,
+      "total_listings": 1905,
+      "ba_listings": 1905,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -144,14 +145,14 @@
         "Halbe"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-03T11:12:55.888278+00:00"
+      "scraped_at": "2026-06-04T10:07:20.554447+00:00"
     },
     {
       "id": 9,
       "name": "Hotelfachmann",
       "demand_score": 23,
-      "total_listings": 1193,
-      "ba_listings": 1193,
+      "total_listings": 1191,
+      "ba_listings": 1191,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -162,14 +163,14 @@
         "Kremmen"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-03T11:12:34.231391+00:00"
+      "scraped_at": "2026-06-04T10:06:59.237069+00:00"
     },
     {
       "id": 11,
       "name": "Tiefbaufacharbeiter",
-      "demand_score": 23,
-      "total_listings": 1153,
-      "ba_listings": 1153,
+      "demand_score": 22,
+      "total_listings": 1148,
+      "ba_listings": 1148,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -180,7 +181,7 @@
         "Erkelenz"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-03T11:13:17.091660+00:00"
+      "scraped_at": "2026-06-04T10:07:42.121506+00:00"
     },
     {
       "id": 7,
@@ -197,25 +198,25 @@
         "Herne, Westfalen"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-03T11:11:48.798709+00:00"
+      "scraped_at": "2026-06-04T10:06:16.525127+00:00"
     },
     {
       "id": 12,
       "name": "Bauzeichner",
       "demand_score": 10,
-      "total_listings": 360,
-      "ba_listings": 360,
+      "total_listings": 359,
+      "ba_listings": 359,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
         "Nordhorn",
-        "Husum, Nordsee",
         "Erfurt",
         "Berlin",
-        "Fulda"
+        "Fulda",
+        "Augsburg, Bayern"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-03T11:13:38.318101+00:00"
+      "scraped_at": "2026-06-04T10:08:03.808967+00:00"
     }
   ]
 }
