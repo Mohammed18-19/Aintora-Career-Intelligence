@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-06T08:44:29.800540+00:00",
+  "scraped_at": "2026-06-07T09:27:05.743116+00:00",
   "total_fields": 12,
   "failed": [],
   "status": "success",
@@ -8,8 +8,8 @@
       "id": 3,
       "name": "Mechatroniker",
       "demand_score": 100,
-      "total_listings": 5381,
-      "ba_listings": 5381,
+      "total_listings": 5373,
+      "ba_listings": 5373,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -20,14 +20,14 @@
         "Frechen"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-06T08:41:13.212334+00:00"
+      "scraped_at": "2026-06-07T09:23:49.540738+00:00"
     },
     {
       "id": 4,
       "name": "Elektroniker",
       "demand_score": 100,
-      "total_listings": 6858,
-      "ba_listings": 6858,
+      "total_listings": 6855,
+      "ba_listings": 6855,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -38,14 +38,14 @@
         "Stralsund"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-06T08:41:36.101422+00:00"
+      "scraped_at": "2026-06-07T09:24:11.645653+00:00"
     },
     {
       "id": 6,
       "name": "Fachkraft Lagerlogistik",
       "demand_score": 100,
-      "total_listings": 6647,
-      "ba_listings": 6647,
+      "total_listings": 6644,
+      "ba_listings": 6644,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -56,14 +56,14 @@
         "Berlin"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-06T08:42:18.958511+00:00"
+      "scraped_at": "2026-06-07T09:24:54.557902+00:00"
     },
     {
       "id": 1,
       "name": "Pflegefachmann",
       "demand_score": 87,
-      "total_listings": 4397,
-      "ba_listings": 4397,
+      "total_listings": 4391,
+      "ba_listings": 4391,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -71,17 +71,17 @@
         "Meiningen",
         "Aschendorf, Stadt Papenburg",
         "Flensburg",
-        "Dortmund"
+        "Eislingen/Fils"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-06T08:40:29.212332+00:00"
+      "scraped_at": "2026-06-07T09:23:04.217016+00:00"
     },
     {
       "id": 8,
       "name": "Kfz-Mechatroniker",
       "demand_score": 67,
-      "total_listings": 3364,
-      "ba_listings": 3364,
+      "total_listings": 3361,
+      "ba_listings": 3361,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -92,14 +92,14 @@
         "Haibach, Niederbayern"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-06T08:43:03.429965+00:00"
+      "scraped_at": "2026-06-07T09:25:38.821921+00:00"
     },
     {
       "id": 5,
       "name": "Industriemechaniker",
       "demand_score": 60,
-      "total_listings": 3009,
-      "ba_listings": 3009,
+      "total_listings": 3007,
+      "ba_listings": 3007,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -109,14 +109,14 @@
         "Bruckmühl, Mangfall"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-06T08:41:57.980252+00:00"
+      "scraped_at": "2026-06-07T09:24:32.256388+00:00"
     },
     {
       "id": 2,
       "name": "Fachinformatiker",
       "demand_score": 52,
-      "total_listings": 2640,
-      "ba_listings": 2640,
+      "total_listings": 2635,
+      "ba_listings": 2635,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -127,7 +127,7 @@
         "Sankt Augustin"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-06T08:40:51.051733+00:00"
+      "scraped_at": "2026-06-07T09:23:27.193140+00:00"
     },
     {
       "id": 10,
@@ -144,7 +144,7 @@
         "Halbe"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-06T08:43:46.454891+00:00"
+      "scraped_at": "2026-06-07T09:26:22.564376+00:00"
     },
     {
       "id": 9,
@@ -162,7 +162,7 @@
         "Kremmen"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-06T08:43:25.427466+00:00"
+      "scraped_at": "2026-06-07T09:26:01.543498+00:00"
     },
     {
       "id": 11,
@@ -180,7 +180,7 @@
         "Hamburg"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-06T08:44:08.717545+00:00"
+      "scraped_at": "2026-06-07T09:26:44.034731+00:00"
     },
     {
       "id": 7,
@@ -197,7 +197,7 @@
         "Herne, Westfalen"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-06T08:42:40.914125+00:00"
+      "scraped_at": "2026-06-07T09:25:17.115455+00:00"
     },
     {
       "id": 12,
@@ -215,7 +215,7 @@
         "Fulda"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-06T08:44:29.800429+00:00"
+      "scraped_at": "2026-06-07T09:27:05.743021+00:00"
     }
   ]
 }
