@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-13T09:27:46.226994+00:00",
+  "scraped_at": "2026-06-14T09:45:32.485539+00:00",
   "total_fields": 12,
   "failed": [],
   "status": "success",
@@ -8,8 +8,8 @@
       "id": 3,
       "name": "Mechatroniker",
       "demand_score": 100,
-      "total_listings": 5286,
-      "ba_listings": 5286,
+      "total_listings": 5283,
+      "ba_listings": 5283,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -20,32 +20,32 @@
         "Herzogenaurach"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-13T09:24:29.980390+00:00"
+      "scraped_at": "2026-06-14T09:44:18.685918+00:00"
     },
     {
       "id": 4,
       "name": "Elektroniker",
       "demand_score": 100,
-      "total_listings": 6811,
-      "ba_listings": 6811,
+      "total_listings": 6809,
+      "ba_listings": 6809,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
+        "Luckaitztal",
         "Lage, Lippe",
         "Höchstadt an der Aisch",
         "Herzogenaurach",
-        "Hirschaid",
-        "Oderberg, Mark"
+        "Hirschaid"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-13T09:24:52.738837+00:00"
+      "scraped_at": "2026-06-14T09:44:27.842211+00:00"
     },
     {
       "id": 6,
       "name": "Fachkraft Lagerlogistik",
       "demand_score": 100,
-      "total_listings": 6471,
-      "ba_listings": 6471,
+      "total_listings": 6477,
+      "ba_listings": 6477,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -56,14 +56,14 @@
         "Selmsdorf"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-13T09:25:37.217829+00:00"
+      "scraped_at": "2026-06-14T09:44:43.602425+00:00"
     },
     {
       "id": 1,
       "name": "Pflegefachmann",
       "demand_score": 86,
-      "total_listings": 4333,
-      "ba_listings": 4333,
+      "total_listings": 4336,
+      "ba_listings": 4336,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -74,14 +74,14 @@
         "Aschendorf, Stadt Papenburg"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-13T09:23:47.074149+00:00"
+      "scraped_at": "2026-06-14T09:44:01.432679+00:00"
     },
     {
       "id": 8,
       "name": "Kfz-Mechatroniker",
       "demand_score": 65,
-      "total_listings": 3262,
-      "ba_listings": 3262,
+      "total_listings": 3259,
+      "ba_listings": 3259,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -92,14 +92,14 @@
         "Nienburg (Weser)"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-13T09:26:21.304981+00:00"
+      "scraped_at": "2026-06-14T09:45:00.181822+00:00"
     },
     {
       "id": 5,
       "name": "Industriemechaniker",
       "demand_score": 59,
-      "total_listings": 2980,
-      "ba_listings": 2980,
+      "total_listings": 2981,
+      "ba_listings": 2981,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -110,14 +110,14 @@
         "Straubing"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-13T09:25:15.048032+00:00"
+      "scraped_at": "2026-06-14T09:44:36.205822+00:00"
     },
     {
       "id": 2,
       "name": "Fachinformatiker",
       "demand_score": 51,
-      "total_listings": 2589,
-      "ba_listings": 2589,
+      "total_listings": 2588,
+      "ba_listings": 2588,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -128,7 +128,7 @@
         "Sankt Augustin"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-13T09:24:08.002976+00:00"
+      "scraped_at": "2026-06-14T09:44:09.815371+00:00"
     },
     {
       "id": 10,
@@ -139,20 +139,21 @@
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
+        "Beelitz, Mark",
         "Harsefeld",
         "Kerpen, Rheinland",
         "Prenzlau",
         "Spremberg, Niederlausitz"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-13T09:27:03.013026+00:00"
+      "scraped_at": "2026-06-14T09:45:15.363272+00:00"
     },
     {
       "id": 9,
       "name": "Hotelfachmann",
       "demand_score": 23,
-      "total_listings": 1172,
-      "ba_listings": 1172,
+      "total_listings": 1173,
+      "ba_listings": 1173,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -163,7 +164,7 @@
         "Dingelstädt, Eichsfeld"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-13T09:26:42.289052+00:00"
+      "scraped_at": "2026-06-14T09:45:07.758993+00:00"
     },
     {
       "id": 11,
@@ -181,7 +182,7 @@
         "Herford"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-13T09:27:24.568693+00:00"
+      "scraped_at": "2026-06-14T09:45:22.958666+00:00"
     },
     {
       "id": 7,
@@ -199,14 +200,14 @@
         "Herne, Westfalen"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-13T09:26:00.480646+00:00"
+      "scraped_at": "2026-06-14T09:44:51.851699+00:00"
     },
     {
       "id": 12,
       "name": "Bauzeichner",
       "demand_score": 10,
-      "total_listings": 339,
-      "ba_listings": 339,
+      "total_listings": 338,
+      "ba_listings": 338,
       "ausbildung_de": 0,
       "stepstone": 0,
       "top_cities": [
@@ -217,7 +218,7 @@
         "Fulda"
       ],
       "companies_hiring": [],
-      "scraped_at": "2026-06-13T09:27:46.226884+00:00"
+      "scraped_at": "2026-06-14T09:45:32.485144+00:00"
     }
   ]
 }
